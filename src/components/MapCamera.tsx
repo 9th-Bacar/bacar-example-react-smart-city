@@ -44,8 +44,11 @@ const MapCamera = ({ name, title, info }: MapCameraProps) => {
         active={objectSelectedState.name === name}
         transition={0.02}
         distance={50}
+        enableDamping
         minPolarAngle={75}
         maxPolarAngle={75}
+        autoRotate
+        autoRotateSpeed={0.5}
       />
     </>
   );

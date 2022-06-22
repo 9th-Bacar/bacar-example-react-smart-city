@@ -28,6 +28,7 @@ const Game = () => {
           y={97.33}
           z={223.68}
           enableZoom
+          enableDamping
           autoRotate
           autoRotateSpeed={0.5}
           maxPolarAngle={75}
