@@ -15,7 +15,7 @@ specifiers:
   vite: ^2.9.12
 
 dependencies:
-  lingo3d-react: 1.2.226_biqbaboplfbrettd7655fr4n2y
+  lingo3d-react: 1.2.232_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   valtio: 1.6.1_react@18.2.0+vite@2.9.12
@@ -1004,8 +1004,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /lingo3d-react/1.2.226_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-LaBDjQCvo5myYMWfM0BQ/ki4hd66Ix3jMy43LN+e+fqW1b++Rqp+/g+IBNzgMMe3/6S5lnObWFx8KfK0AMtiMQ==}
+  /lingo3d-react/1.2.232_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-BkZtn4c28LMAh0x1Tw4N4lO5CTiLIQvpFHMl+iYSBBG1SKcC+1xaNzrDx3ceOpPQOmyGpdolpnRv043uPrm53g==}
     peerDependencies:
       react: '18'
     dependencies:
@@ -1016,7 +1016,7 @@ packages:
       '@lincode/reactivity': 1.0.65
       '@lincode/utils': 1.2.51
       '@types/three': 0.140.0
-      lingo3d: 1.10.263
+      lingo3d: 1.10.271
       nanoid: 3.3.4
       popmotion: 11.0.3
       react: 18.2.0
@@ -1025,8 +1025,8 @@ packages:
       - react-dom
     dev: false
 
-  /lingo3d/1.10.263:
-    resolution: {integrity: sha512-oJHmX08L/5/J3fkW2wYNQzlq1qYMm9Fgwyl4MYgx4w+2wAicitVZGKvZgktdB05kcvTT6Tut8jp0+TixWBPLZQ==}
+  /lingo3d/1.10.271:
+    resolution: {integrity: sha512-F08gHX5y5ebali0JnUT6yc3dpJUC9Dw2Asft8TqKMPj/kggK9evZbt3P4fTTAY1CGoyR5/IqxMZt1vVMdgKRSQ==}
     dependencies:
       '@lincode/events': 1.0.24
       '@lincode/filetypes': 1.0.1
@@ -1039,8 +1039,8 @@ packages:
       browser-fs-access: 0.29.6
       cannon-es: 0.19.0
       postprocessing: 6.28.1_three@0.140.2
-      preact: 10.8.1
-      preact-custom-element: 4.2.1_preact@10.8.1
+      preact: 10.8.2
+      preact-custom-element: 4.2.1_preact@10.8.2
       prettier: 2.7.1
       three: 0.140.2
       tweakpane: 3.1.0
@@ -1206,16 +1206,16 @@ packages:
       three: 0.140.2
     dev: false
 
-  /preact-custom-element/4.2.1_preact@10.8.1:
+  /preact-custom-element/4.2.1_preact@10.8.2:
     resolution: {integrity: sha512-/fiEEAyC+MXRlCBRmv/owoN5BLpO2nF/MF3YBHLtp4C2lNqlhV+a4he74A5DhfDoRmxDHm0sYVgQzWFEyzTDsw==}
     peerDependencies:
       preact: 10.x
     dependencies:
-      preact: 10.8.1
+      preact: 10.8.2
     dev: false
 
-  /preact/10.8.1:
-    resolution: {integrity: sha512-p5CKQ0MCEXTGKGOHiFaNE2V2nDq2hvDHykXvIlz+4lbfJ9umLZr8JS/fa1bXUwRcHXK+Ljk8zqmDhr25n0LtVg==}
+  /preact/10.8.2:
+    resolution: {integrity: sha512-AKGt0BsDSiAYzVS78jZ9qRwuorY2CoSZtf1iOC6gLb/3QyZt+fLT09aYJBjRc/BEcRc4j+j3ggERMdNE43i1LQ==}
     dev: false
 
   /prettier/2.7.1:

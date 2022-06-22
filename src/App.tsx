@@ -21,8 +21,9 @@ const Game = () => {
     <>
       <World>
         <OrbitCamera
-          fov={width < 640 ? 110 : 75}
-          active={objectSelectedState.name === "" ? "transition" : false}
+          fov={width < 640 ? 110 : 90}
+          active={objectSelectedState.name === ""}
+          transition={0.02}
           x={31.81}
           y={97.33}
           z={223.68}
