@@ -1,4 +1,4 @@
-import { Cube, Find, HTML, OrbitCamera } from "lingo3d-react";
+import { Cube, Find, HTML, OrbitCamera, useWindowSize } from "lingo3d-react";
 import { useSnapshot } from "valtio";
 import informationState from "../states/informationState";
 import objectSelectedState from "../states/objectSelectedState";
@@ -11,7 +11,7 @@ type MapCameraProps = {
 
 const MapCamera = ({ name, title, info }: MapCameraProps) => {
   useSnapshot(objectSelectedState);
-
+  const { width } = useWindowSize();
   const handleClick = () => {
     if (objectSelectedState.name === name) {
       objectSelectedState.name = ""
@@ -38,6 +38,7 @@ const MapCamera = ({ name, title, info }: MapCameraProps) => {
         </HTML>
       </Find>
       <OrbitCamera
+        fov={width < 640 ? 110 : 75}
         targetId={name}
         active={objectSelectedState.name === name ? "transition" : false}
         distance={50}
