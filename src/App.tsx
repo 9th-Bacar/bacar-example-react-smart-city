@@ -1,11 +1,8 @@
 import {
-  Cube,
-  HTML,
   Model,
   OrbitCamera,
   Setup,
   usePreload,
-  useWindowSize,
   World,
 } from "lingo3d-react";
 import { useSnapshot } from "valtio";
@@ -16,22 +13,18 @@ import objectSelectedState from "./states/objectSelectedState";
 
 const Game = () => {
   useSnapshot(objectSelectedState);
-  const { width } = useWindowSize();
   return (
     <>
       <World>
         <OrbitCamera
-          fov={width < 640 ? 110 : 90}
+          fov={90}
           active={objectSelectedState.name === ""}
           transition={0.02}
-          x={31.81}
-          y={97.33}
-          z={223.68}
+          innerZ={223.68}
           enableZoom
           enableDamping
           autoRotate
-          autoRotateSpeed={0.5}
-          maxPolarAngle={75}
+          minPolarAngle={100}
         />
         <Model
           metalnessFactor={0.5}
@@ -65,7 +58,6 @@ const Game = () => {
         </Model>
         <Setup
           defaultLight="studio"
-          skybox="bg0.jpg"
           logarithmicDepth
           bloomStrength={0.3}
           bloomThreshold={0.9}
