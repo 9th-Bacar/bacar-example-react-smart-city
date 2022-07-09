@@ -1,6 +1,3 @@
-import { proxy } from 'valtio'
+import { globalState } from "lingo3d-react"
 
-const objectSelectedState = proxy({
-    name: ""
-})
-export default objectSelectedState
+export const [useObjectSelected, setObjectSelected] = globalState({ name: "" })
