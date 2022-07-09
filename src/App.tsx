@@ -1,13 +1,18 @@
-import { Model, OrbitCamera, Setup, World } from "lingo3d-react"
+import { Model, OrbitCamera, World } from "lingo3d-react"
 import "./App.css"
 import MapCamera from "./components/MapCamera"
 import { useObjectSelected } from "./states/objectSelectedState"
 
 const App = () => {
+  //global state that determines the selected object
+  //定义选中物体的全局状态
   const objectSelected = useObjectSelected()
 
   return (
-    <World>
+    <World defaultLight="env.hdr" color="rgb(0, 0, 25)">
+
+      {/* default camera, active when no object is selected */}
+      {/* 默认相机，没有选中任何物体时启动 */}
       <OrbitCamera
         fov={90}
         active={objectSelected.name === ""}
@@ -18,15 +23,20 @@ const App = () => {
         autoRotate
         minPolarAngle={100}
       />
+      
+      {/* map model */}
+      {/* 地图模型 */}
       <Model
-        metalnessFactor={0.5}
-        roughnessFactor={0.5}
         pbr
+        metalnessFactor={0.5}
+        roughnessFactor={0.2}
         y={46.67}
         width={552.32}
         depth={572.75}
         src="shanghai.glb"
       >
+        {/* three zoomable cameras that focus on selected objects */}
+        {/* 三个可缩放，并且可以聚焦到选中物体的相机 */}
         <MapCamera name="01-shanghaizhongxindasha" title="Shanghai Tower" />
         <MapCamera
           name="02-huanqiujinrongzhongxin_huanqiujinrongzhongxin_0"
@@ -38,12 +48,6 @@ const App = () => {
           title="Oriental Pearl Tower"
         />
       </Model>
-      <Setup
-        defaultLight="studio"
-        logarithmicDepth
-        bloomStrength={0.3}
-        bloomThreshold={0.9}
-      />
     </World>
   )
 }
