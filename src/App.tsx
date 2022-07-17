@@ -1,4 +1,4 @@
-import { Model, OrbitCamera, World } from "lingo3d-react"
+import { DirectionalLight, Model, OrbitCamera, World } from "lingo3d-react"
 import "./App.css"
 import MapCamera from "./components/MapCamera"
 import { useObjectSelected } from "./states/objectSelectedState"
@@ -10,7 +10,16 @@ const App = () => {
 
   return (
     <World defaultLight="env.hdr" color="rgb(0, 0, 25)">
-
+      {/* light that casts shadows */}
+      {/* 投射阴影的灯光 */}
+      <DirectionalLight
+        x={1000}
+        y={1000}
+        z={1000}
+        shadowDistance={500}
+        shadowResolution={2048}
+      />
+      
       {/* default camera, active when no object is selected */}
       {/* 默认相机，没有选中任何物体时启动 */}
       <OrbitCamera
@@ -23,13 +32,11 @@ const App = () => {
         autoRotate
         minPolarAngle={100}
       />
-      
+
       {/* map model */}
       {/* 地图模型 */}
       <Model
-        pbr
-        metalnessFactor={0.5}
-        roughnessFactor={0.2}
+        metalnessFactor={2}
         y={46.67}
         width={552.32}
         depth={572.75}
